@@ -1,0 +1,25 @@
+*** Settings ***
+Library           Selenium2Library    timeout=10
+
+*** Variables ***
+${BROWSER}    chrome
+${SLEEP}    3
+
+*** Test Cases ***
+My Store test
+    Open Browser    http://automationpractice.com/index.php    ${BROWSER}
+    Click Element    xpath=(//span)[31]
+    Click Element    xpath=(//span)[30]
+    Click Element    //img[@title="Blouse"]
+    Click Element    xpath=(//span)[57]
+    ${SLEEP}    3
+    Click Element    xpath=(//span)[35]
+    Click Element    xpath=(//span)[75]
+    Click Element    xpath=(//span)[48]
+    Click Element    //label[@for="cgv"]
+    ${SLEEP}    3
+    Click Element    xpath=(//span)[42]
+    Click Element    xpath=(//span)[51]
+    Click Element    xpath=(//span)[40]
+
+    Close Browser
